@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TorkelSugerPikk</title>
+    <style>
+
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pricebanner {
+            position: relative;
+            -webkit-animation-name: pricebanneret;
+            -webkit-animation-duration: 60s;
+            animation-name: pricebanneret;
+            animation-duration: 60s;
+            z-index: 10;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .pricebanner2 {
+            position: relative;
+            -webkit-animation-name: pricebanneret2;
+            -webkit-animation-duration: 60s;
+            animation-name: pricebanneret2;
+            animation-duration: 60s;
+            z-index: 10;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            margin-top: -61px;
+        }
+        @-webkit-keyframes pricebanneret {
+            0%   {left: 0;}
+            50%   {left: 2560px;}
+            50.01%   {left: -2560px;}
+            100% {left:0;}
+        }
+
+        @keyframes pricebanneret {
+            0%   {left: 0;}
+            50%   {left: 2560px;}
+            50.01%   {left: -2560px;}
+            100% {left:0;}
+        }
+
+        @-webkit-keyframes pricebanneret2 {
+            0%   {left:-2560px;}
+            100% {left:2560px;}
+        }
+
+        @keyframes pricebanneret2 {
+            0%   {left:-2560px;}
+            100% {left:2560px;}
+        }
+
+        .bgpricebanner {
+            background-color: black;
+            width: 2560px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        /*      2560x1440 standard - windows     */
+        @media only screen and  (min-height: 1309px){
+            @-webkit-keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @-webkit-keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            @keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            .bgpricebanner {
+                background-color: black;
+                width: 2560px;
+                overflow: hidden;
+            }
+        }
+
+        table {
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .minus {
+            color: red;
+        }
+
+        .plus {
+            color: green;
+        }
+
+        .theimg img {
+            width: 50px;
+            height: 50px;
+            padding-right: 150px;
+        }
+
+        .theprice {
+            font: 20px bold;
+        }
+
+        table {
+            margin-right: 100px;
+        }
+
+        td, th img {
+            height: 50px;
+            width: 50px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+            background: black;
+            opacity: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="bgpricebanner">
+    <div class="pricebanner">
+
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/btc.png"></th>
+                <td>Bitcoin BTC</td>
+                <td>9462.34</td>
+                <td class="minus"> 3.41%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/Dash.png"></th>
+                <td>Dash DASH</td>
+                <td>567.32</td>
+                <td class="plus"> 6.73%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/zencash.png"></th>
+                <td>Zencash ZEN</td>
+                <td>46.21</td>
+                <td class="plus"> 18.42%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/ripple.png"></th>
+                <td>Ripple XRP</td>
+                <td>0.845</td>
+                <td class="minus"> 8.11%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/ubiq.png"></th>
+                <td>Ubiq UBQ</td>
+                <td>1.74</td>
+                <td class="plus"> 3.76%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/nem.png"></th>
+                <td>Nem NEM</td>
+                <td>0.4160</td>
+                <td class="minus"> 1.24%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/stellar.png"></th>
+                <td>Stellar XLM</td>
+                <td>0.4394</td>
+                <td class="minus"> 3.76%</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div class="pricebanner2">
+
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/nano.png"></th>
+                <td>Nano NANO</td>
+                <td>8.93</td>
+                <td class="plus"> 7.81%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/neo.png"></th>
+                <td>Neo NEO</td>
+                <td>85.23</td>
+                <td class="minus"> 1.52%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/ark.png"></th>
+                <td>Ark ARK</td>
+                <td>3.76</td>
+                <td class="plus"> 11.21%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/monero.png"></th>
+                <td>Monero XMR</td>
+                <td>264.56</td>
+                <td class="plus"> 2.71%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/cardano.png"></th>
+                <td>Cardano ADA</td>
+                <td>0.3716</td>
+                <td class="plus"> 9.67%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/litecoin.png"></th>
+                <td>Litecoin LTC</td>
+                <td>151.35</td>
+                <td class="plus"> 0.67%</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="tableimg"><img src="img2/bitshares.png"></th>
+                <td>Bitshares BTS</td>
+                <td>0.4546</td>
+                <td class="plus"> 31.42%</td>
+            </tr>
+        </table>
+
+
+    </div>
+</div>
+<div class="overlay"></div>
+<iframe src="https://player.twitch.tv/?channel=fjordheksen" frameborder="0" scrolling="no" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+
+
+
+
+
+
+
+</body>
+</html>
