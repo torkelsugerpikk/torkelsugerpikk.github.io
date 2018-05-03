@@ -8,15 +8,15 @@
         body {
             overflow: hidden;
             margin: 0;
-            padding: 0;
+            font-family: sans-serif;
         }
 
         .pricebanner {
             position: relative;
             -webkit-animation-name: pricebanneret;
-            -webkit-animation-duration: 60s;
+            -webkit-animation-duration: 30s;
             animation-name: pricebanneret;
-            animation-duration: 60s;
+            animation-duration: 30s;
             z-index: 10;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -25,47 +25,50 @@
         .pricebanner2 {
             position: relative;
             -webkit-animation-name: pricebanneret2;
-            -webkit-animation-duration: 60s;
+            -webkit-animation-duration: 30s;
             animation-name: pricebanneret2;
-            animation-duration: 60s;
+            animation-duration: 30s;
             z-index: 10;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             margin-top: -61px;
         }
-        @-webkit-keyframes pricebanneret {
-            0%   {left: 0;}
-            50%   {left: 2560px;}
-            50.01%   {left: -2560px;}
-            100% {left:0;}
-        }
-
-        @keyframes pricebanneret {
-            0%   {left: 0;}
-            50%   {left: 2560px;}
-            50.01%   {left: -2560px;}
-            100% {left:0;}
-        }
-
-        @-webkit-keyframes pricebanneret2 {
-            0%   {left:-2560px;}
-            100% {left:2560px;}
-        }
-
-        @keyframes pricebanneret2 {
-            0%   {left:-2560px;}
-            100% {left:2560px;}
-        }
-
-        .bgpricebanner {
-            background-color: black;
-            width: 2560px;
-            overflow: hidden;
-            z-index: 1000;
-        }
 
         /*      2560x1440 standard - windows     */
         @media only screen and  (min-height: 1309px){
+            @-webkit-keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @keyframes pricebanneret {
+                0%   {left: 0;}
+                50%   {left: 2560px;}
+                50.01%   {left: -2560px;}
+                100% {left:0;}
+            }
+
+            @-webkit-keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            @keyframes pricebanneret2 {
+                0%   {left:-2560px;}
+                100% {left:2560px;}
+            }
+
+            .bgpricebanner {
+                background-color: black;
+                width: 2560px;
+                overflow: hidden;
+            }
+        }
+
+        /*      2560x1600 standard - MAC     */
+        @media screen and (min-height: 1600px){
             @-webkit-keyframes pricebanneret {
                 0%   {left: 0;}
                 50%   {left: 2560px;}
@@ -104,34 +107,35 @@
             padding: 0;
         }
 
-        .minus {
-            color: red;
-        }
-
-        .plus {
-            color: green;
-        }
-
         .theimg img {
             width: 50px;
             height: 50px;
             padding-right: 150px;
         }
 
-        .theprice {
-            font: 20px bold;
-        }
-
         table {
-            margin-right: 100px;
+            border: 1px solid black;
+            margin-right: 150px;
         }
 
-        td, th img {
+        td {
+            color: white;
+            font-size: 20px;
+        }
+
+        th img {
             height: 50px;
             width: 50px;
             font-size: 20px;
             color: white;
         }
+
+        th {
+            color: white;
+            font-size: 20px;
+        }
+
+
 
         .overlay {
             height: 100%;
@@ -171,65 +175,32 @@
 <div class="overlay3"></div>
 <div class="overlay2"></div>
 
-<div class="bgpricebanner">
+    
+<div style="height: 61px" class="bgpricebanner">
     <div class="pricebanner">
 
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/btc.png"></th>
-                <td>Bitcoin BTC</td>
-                <td>9462.34</td>
-                <td class="minus"> 3.41%</td>
-            </tr>
+            <tr id="zencash"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/Dash.png"></th>
-                <td>Dash DASH</td>
-                <td>567.32</td>
-                <td class="plus"> 6.73%</td>
-            </tr>
+            <tr id="bitcoin"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/zencash.png"></th>
-                <td>Zencash ZEN</td>
-                <td>46.21</td>
-                <td class="plus"> 18.42%</td>
-            </tr>
+            <tr id="dash"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/ripple.png"></th>
-                <td>Ripple XRP</td>
-                <td>0.845</td>
-                <td class="minus"> 8.11%</td>
-            </tr>
+            <tr id="cardano"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/ubiq.png"></th>
-                <td>Ubiq UBQ</td>
-                <td>1.74</td>
-                <td class="plus"> 3.76%</td>
-            </tr>
+            <tr id="litecoin"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/nem.png"></th>
-                <td>Nem NEM</td>
-                <td>0.4160</td>
-                <td class="minus"> 1.24%</td>
-            </tr>
+            <tr id="monero"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/stellar.png"></th>
-                <td>Stellar XLM</td>
-                <td>0.4394</td>
-                <td class="minus"> 3.76%</td>
-            </tr>
+            <tr id="ripple"></tr>
         </table>
+
     </div>
 
 
@@ -238,65 +209,427 @@
     <div class="pricebanner2">
 
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/nano.png"></th>
-                <td>Nano NANO</td>
-                <td>8.93</td>
-                <td class="plus"> 7.81%</td>
-            </tr>
+            <tr id="stellar"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/neo.png"></th>
-                <td>Neo NEO</td>
-                <td>85.23</td>
-                <td class="minus"> 1.52%</td>
-            </tr>
+            <tr id="nem"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/ark.png"></th>
-                <td>Ark ARK</td>
-                <td>3.76</td>
-                <td class="plus"> 11.21%</td>
-            </tr>
+            <tr id="nano"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/monero.png"></th>
-                <td>Monero XMR</td>
-                <td>264.56</td>
-                <td class="plus"> 2.71%</td>
-            </tr>
+            <tr id="bitshares"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/cardano.png"></th>
-                <td>Cardano ADA</td>
-                <td>0.3716</td>
-                <td class="plus"> 9.67%</td>
-            </tr>
+            <tr id="ark"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/litecoin.png"></th>
-                <td>Litecoin LTC</td>
-                <td>151.35</td>
-                <td class="plus"> 0.67%</td>
-            </tr>
+            <tr id="ubiq"></tr>
         </table>
         <table>
-            <tr>
-                <th class="tableimg"><img src="img2/bitshares.png"></th>
-                <td>Bitshares BTS</td>
-                <td>0.4546</td>
-                <td class="plus"> 31.42%</td>
-            </tr>
+            <tr id="neo"></tr>
         </table>
-
 
     </div>
 </div>
+
+
+
+
+<!--SCRIPT FOR PRICES-->
+
+
+
+
+<!--ZENCASH SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("zencash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/zencash.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/zencash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+<!--BITCOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("bitcoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/btc.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/bitcoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+<!--DASH SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("dash").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/Dash.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/dash/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--LITECOIN SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("litecoin").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/litecoin.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/litecoin/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--CARDANO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("cardano").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/cardano.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/cardano/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--STELLAR SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("stellar").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/stellar.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/stellar/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--MONERO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("monero").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/monero.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/monero/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--ARK SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ark").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ark.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ark/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+<!--NANO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("nano").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/nano.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/nano/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+<!--NEO SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("neo").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/neo.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/neo/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+<!--UBIQ SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ubiq").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ubiq.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ubiq/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+<!--NEM SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("nem").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/nem.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/nem/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
+
+<!--BITSHARES SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("bitshares").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/bitshares.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/bitshares/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+<!--RIPPLE SCRIPT-->
+<script>
+    var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+    json.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
+            var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+            object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
+                document.getElementById("ripple").innerHTML =`
+                <th class="tableimg"><img height="50px" width="50px" src="img2/ripple.png"> </th>
+                <td>$${currency.price_usd}</td>
+                <td> </td>
+                <td style="color: green">${currency.percent_change_24h}%</td>
+            `
+            });
+        }
+    };
+    json.open(
+        "GET", // method
+        "https://api.coinmarketcap.com/v1/ticker/ripple/", // url
+        true // async
+    ); // initialise the request
+    json.send(); //send request
+
+</script>
+
+
+
 <div class="overlay"></div>
 <iframe src="https://player.twitch.tv/?channel=fjordheksen" frameborder="0" scrolling="no" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
 
