@@ -11,7 +11,7 @@
             font-family: sans-serif;
         }
 
-        .pricebanner {
+          .pricebanner {
             position: relative;
             -webkit-animation-name: pricebanneret;
             -webkit-animation-duration: 30s;
@@ -20,6 +20,7 @@
             z-index: 10;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
+            z-index: 100;
         }
 
         .pricebanner2 {
@@ -32,7 +33,40 @@
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             margin-top: -61px;
+            z-index: 100;
         }
+
+        @-webkit-keyframes pricebanneret {
+            0%   {left: 0;}
+            50%   {left: 2560px;}
+            50.01%   {left: -2560px;}
+            100% {left:0;}
+        }
+
+        @keyframes pricebanneret {
+            0%   {left: 0;}
+            50%   {left: 2560px;}
+            50.01%   {left: -2560px;}
+            100% {left:0;}
+        }
+
+        @-webkit-keyframes pricebanneret2 {
+            0%   {left:-2560px;}
+            100% {left:2560px;}
+        }
+
+        @keyframes pricebanneret2 {
+            0%   {left:-2560px;}
+            100% {left:2560px;}
+        }
+
+        .bgpricebanner {
+            background-color: black;
+            width: 2560px;
+            overflow: hidden;
+        }
+
+
 
         /*      2560x1440 standard - windows     */
         @media only screen and  (min-height: 1309px){
@@ -69,6 +103,7 @@
 
         /*      2560x1600 standard - MAC     */
         @media screen and (min-height: 1600px){
+
             @-webkit-keyframes pricebanneret {
                 0%   {left: 0;}
                 50%   {left: 2560px;}
@@ -100,6 +135,7 @@
             }
         }
 
+
         table {
             display: inline;
             list-style-type: none;
@@ -115,7 +151,7 @@
 
         table {
             border: 1px solid black;
-            margin-right: 150px;
+            margin-right: 140px;
         }
 
         td {
@@ -134,6 +170,8 @@
             color: white;
             font-size: 20px;
         }
+
+
 
 
 
